@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow - Real-Time Task Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Material Icons for subtle icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">✅</span>
+            <span class="logo-text">TaskFlow</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="nav-link active"><span class="material-icons">dashboard</span> Dashboard</a>
+            <a href="#" class="nav-link"><span class="material-icons">info</span> About</a>
+            <a href="#" class="nav-link"><span class="material-icons">help_outline</span> Help</a>
+        </nav>
+        <div id="authButtons" class="auth-buttons">
+            <button id="googleLogin" class="primary-btn"><span class="material-icons" style="vertical-align:middle;">login</span> Sign in with Google</button>
+            <button id="logout" class="secondary-btn" style="display:none;"><span class="material-icons" style="vertical-align:middle;">logout</span> Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome-section">
+            <h1>Welcome to <span style="color:#4a90e2;">TaskFlow</span></h1>
+            <p class="subtitle">Your collaborative, real-time task manager for teams and individuals.<br>
+            Stay organized, attach files, and manage your work from anywhere!</p>
+        </section>
+
+        <section class="task-input-section">
+            <h2><span class="material-icons" style="vertical-align:middle;color:#50e3c2;">add_circle</span> Add New Task</h2>
+            <form id="taskForm" class="task-form">
+                <input type="text" id="taskInput" placeholder="Task title (e.g. Design Homepage)" required>
+                <textarea id="taskDesc" placeholder="Description (optional)"></textarea>
+                <input type="file" id="fileUpload">
+                <button type="submit" class="primary-btn"><span class="material-icons" style="vertical-align:middle;">add</span> Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <h2><span class="material-icons" style="vertical-align:middle;color:#4a90e2;">list_alt</span> Your Tasks</h2>
+            <div id="taskList" class="task-list">
+                <!-- Tasks will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <span class="material-icons" style="font-size:1.1em;vertical-align:middle;color:#50e3c2;">copyright</span>
+            2025 TaskFlow &bull; Made with ❤️ for productivity
+        </div>
+        <div>
+            <a href="mailto:support@taskflow.com" style="color:#4a90e2;text-decoration:none; margin-right: 10px;">Contact Support</a>
+        </div>
+    </footer>
+
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
